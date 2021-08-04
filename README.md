@@ -10,11 +10,6 @@
 
 ### Dependencies
 
-* axios
-* express
-* body-parser
-* ejs
-
 ```
 npm install express ejs body-parser axios math moment
 npm install -D nodemon
