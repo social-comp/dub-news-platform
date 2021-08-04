@@ -21,12 +21,13 @@ npm install -D nodemon
 
 ### Executing program
 
-* How to run the app
+* How to run and start the app
 
 ```
-npm install 
+npm install
 npm start
 ```
+http://localhost:3000/
 
 ## Help
 
