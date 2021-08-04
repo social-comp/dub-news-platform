@@ -15,9 +15,6 @@ npm install express ejs body-parser axios math moment
 npm install -D nodemon
 ```
 
-### Installing
-
-* 
 
 ### Executing program
 
