@@ -12,9 +12,7 @@
 
 * axios
 * express
-* math
 * body-parser
-* moment
 * ejs
 
 ```
