@@ -1,5 +1,5 @@
 # dub-news-platform
-
+News platform with button labels 
 
 
 ## Description
@@ -42,7 +42,8 @@ http://localhost:3000/
 
 
 ## Things that are not done / bugs
-
+* Login logout backend
+* Comment section full
 
 ## Help
 
