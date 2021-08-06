@@ -1,0 +1,108 @@
+
+<head>
+    <script src="/css/toggle.js"></script>
+
+
+
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article page</title>
+
+   
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap" rel="stylesheet">
+     
+        
+        <link rel="stylesheet" href="/css/indarticle.css">
+        <link rel="stylesheet" href="/css/icomoon/style.css">
+        <style>
+            .form-control{  /* search bar */
+                border-color: rgb(180, 180, 180);
+            }
+        </style>
+</head>
+
+<div style="text-align: center; padding-top:3%;padding-left:23%; padding-right:23%">
+   
+        <% for(var i=1; i<2; i++) {%>
+            <% if ((typeof articles[i].url=='object') || (typeof articles[i].title=='object') || (typeof articles[i].urlToImage=='object') || (typeof articles[i].content=='object')){ %>
+            <% } else { %>
+  
+            <img src="<%- articles[i].urlToImage %>" style="height: auto; width: 100%;max-width: 100%;" alt="Card image cap">
+         <br/>         <br/>
+           
+                <h1 style="padding-bottom:none">      <%- articles[i].title %></h1> 
+                <p><span style="font-size:medium" >  <%- articles[i].author %>&nbsp~ <%- new Date(articles[i].publishedAt.slice(0,10)).toDateString() %>,  <%- moment.utc(articles[i].publishedAt).local().format('hh:mm A') %> </span></p> 
+                
+                
+        
+
+
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" >
+                    <div class="btn-group mr-2" role="group" aria-label="First group" style="margin-bottom: 3%;">
+
+                    <div class="wrap">
+                    <div class="bar">
+                        <span class="btn circle icon-like" id="like" title="Like" ></span>
+                        <span class="btn circle icon-respect" id="respect" title="Respect" ></span>
+                        <span class="btn circle icon-care"  id="care" title="Care" ></span>
+                        <span class="btn circle icon-fair" title="Fair" ></span>
+                        <span class="btn circle icon-loyalty" id="loyalty" title="Loyalty"  ></span>
+                        <span class="btn circle icon-purity" id="purity" title="Purity"  ></span>
+                        <span class="btn circle icon-incivil" id="incivil" title="Incivil" ></span>
+                    </div>
+                    </div>
+                </div>
+                    
+              <!---  <p class="card-text"> <%- articles[i].description %></p>  -->
+            
+                <p>
+
+
+                    WASHINGTON (AP) — Game maker Eric Poses last year created The Worst-Case Scenario Card Game, making a wry reference to the way the coronavirus had upended normal life.
+
+                    He had no idea.
+                    
+                    In a twist that Poses never could have predicted, his game itself would become caught up in the latest fallout from the health crisis: a backlogged global supply chain that means shipping delays and rocketing freight costs.
+                    
+                    Worst-Case Scenario, produced in China, was supposed to reach U.S. retailer Target’s distribution centers in early June. Instead, the games were stuck for weeks at the Port of Seattle and didn’t arrive until mid-July.
+                    
+                    “You do everything right,″ said Poses, who started his Miami Beach, Florida-based toy company All Things Equal in 1997. “You produce on time. You’re psyched about your product.”
+                    
+                    And then ... unforeseeable disaster.
+                    
+                    Like other importers, Poses is contending with a perfect storm of supply trouble — rising prices, overwhelmed ports, a shortage of ships, trains, trucks — that will likely into 2022. Now he is reconsidering a decision he made five years ago: to shift production out of the United States to China. It might make sense, he thinks, to bring production back — at least to Mexico, if not the United States — to protect him from the risks of relying on factories an ocean away in China.
+                    
+                    
+
+                </p>
+             
+                   
+               
+                   
+            <% } %>
+        <% } %>  
+
+   
+        <h2> Comments </h2>
+
+       <br/>
+       <br/>
+       <br/>
+
+
+        </div> 
+
+
+    </div> 
+
+
+               
+            
+</div>
+

@@ -1,0 +1,50 @@
+
+#links a:link, a:hover, a:visited, a:active {
+    color: #0F9BBA;
+}
+
+.log{
+  color:  #000000;
+  font-weight: bold;
+  font-size: xxx-large;
+text-align: center;
+  margin-top: 5%;
+}
+
+#signin{
+  margin-top: 10%;
+  color: #000000;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+
+#sign{
+border-width:thick;
+border-color: gray;
+background: white;
+width: 50%;
+margin-left: 25%;
+margin-right: 25%;
+margin-top: 5%;
+}
+#sign form{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 60%;
+    font-size: large;
+    color: #000000;
+
+   
+}
+
+#sign h5{
+margin-left: 20%;
+margin-bottom: 15%;
+font-size: large;
+
+}
+
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+
+
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/icomoon/style.css">
+        
+        <style>
+            .form-control{  /* search bar */
+                border-color: rgb(180, 180, 180);
+            }
+        </style>
+</head>
+
+<body>
+
+   
+    <nav class="navbar navbar-expand-lg navbar-light  navbar-fixed-top fixed-top">
+       <span ><a class="navbar-brand" href="/" style="font-weight: 700;
+        font-size: 45px;"> News</a>
+
+        
+       
+            <a class="navbar-text "   href ="news.ejs" > Activity</a> &nbsp
+
+           <a class="navbar-text " href="/login">Login </a> &nbsp
+          <a class="navbar-text "   href="/register">Register</a> 
+        
+        </span> 
+ 
+        &nbsp
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+       
+        <div class="collapse navbar-collapse searc-bar" id="navbarSupportedContent">
+
+  <form class="form-inline my-2 my-lg-0" action="/search" method="POST">
+                <input class="form-control mr-sm-2"  name="search" type="search" placeholder="Search" style="width: 300px;"
+                    aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" id="searchbutton" type="submit" style="border-color: rgb(180, 180, 180); color:rgb(161, 161, 161);">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="news-container ">
+        <div class="news ">
+            <% j=0 %>
+            <% for(var i=0; i<4; i++) {%>
+              
+                <% if ((typeof articles[j].url=='object') || (typeof articles[j].title=='object') || (typeof articles[j].urlToImage=='object') || (typeof articles[j].content=='object')){ %>
+                    <% j=j+1; %>
+
+                    <% if(i!=0){ %>
+
+                        <% i=i-1; %>
+                    <% }; %>
+                <% } else { %>
+                    <a href="/article" target="_blank" class="news-box Hover-effect">
+                        <div class="card" style="width:18rem;">
+                            <img class="card-img-top" src="<%- articles[j].urlToImage %>" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="padding-bottom:none">      <%- articles[j].title %></h5> 
+                                <p><span style="font-size:smaller;color:rgb(167, 167, 167);" ><%- new Date(articles[j].publishedAt.slice(0,10)).toDateString() %>,  <%- moment.utc(articles[j].publishedAt).local().format('hh:mm A') %> </span></p> 
+                                <p class="card-text"> <%- articles[j].content.replace(/<[^>]+>/g, "...") %></p> 
+                                <% j=j+1; %>
+                            </div>
+                        </div>
+                    </a>
+                       
+                   
+                       
+                <% } %>
+            <% } %>
+        </div>   
+
+        <div style="padding-left: 2%;padding-right:2%">
+            
+            <h3 >other news</h3>
+            <br/>
+
+            <div class="othernews " style="padding-left: 3%;padding-right:3%">
+                <% for(var i=j; i<j+5; i++) {%>
+                    <% if ((typeof articles[i].url=='object') || (typeof articles[i].title=='object') || (typeof articles[i].urlToImage=='object') || (typeof articles[i].content=='object')){ %>
+                    <% } else { %>
+                        <a href="<%- articles[i].url %>" target="_blank" class="othernews-box Hover-effect">
+            
+                            <div class="card" style="width: 15rem;display: inline-flex;">
+                                <img class="card-img-top" src="<%- articles[i].urlToImage %>" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="padding-bottom:none;font-size:smaller;">      <%- articles[i].title %></h5> 
+                            
+                    
+                                </div> 
+                            </div>
+                        
+                        
+                    
+                        </a>
+                      
+                    
+                    <% } %> 
+                <% } %>
+            </div> 
+        </div> 
+                   
+                
+    </div>
+<script src="js/carousel.js"></script>
+
+<script src="moment.js"></script>
+<script src="moment-timezone-with-data.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script src="js/toggle.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
