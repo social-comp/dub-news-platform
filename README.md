@@ -40,6 +40,10 @@ npm start
 ```
 http://localhost:3000/
 
+
+## Things that are not done / bugs
+
+
 ## Help
 
 email sophiaw@brandeis.edu if there are any issues and the app cannot run
