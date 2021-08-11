@@ -42,8 +42,8 @@ http://localhost:3000/
 
 
 ## Things that are not done / bugs
-* Login logout backend
-* Comment section full
+* Login logout backend was not implemented fully
+* Comment section 
 
 ## Help
 
@@ -53,3 +53,5 @@ email sophiaw@brandeis.edu if there are any issues and the app cannot run
 ## Papers
 
 * [The Engaging News Project Social Media Buttons in Comment Sections](https://mediaengagement.org/wp-content/uploads/2014/04/ENP_Buttons_Report.pdf)
+* [Liberals and Conservatives Rely on Different Sets of Moral Foundations](https://fbaum.unc.edu/teaching/articles/JPSP-2009-Moral-Foundations.pdf)
+* [Civil discourse in an uncivil world](https://www.apa.org/monitor/2016/05/cover-civil-discourse)
