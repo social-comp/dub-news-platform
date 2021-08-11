@@ -1,6 +1,7 @@
 # dub-news-platform
 News platform with Icon Button Labels for Improving Online Discourse
-![icon bar]{ width: 200px; }(https://github.com/social-comp/dub-news-platform/blob/main/iconbar.png) 
+
+![icon bar](https://github.com/social-comp/dub-news-platform/blob/main/iconbar.png) 
 
 ## Description
 A news platform created for one of Social Computing Lab's grant proposals 
