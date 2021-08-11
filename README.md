@@ -3,7 +3,7 @@ News platform with button labels
 
 
 ## Description
-
+A news platform created for one of Social Computing Lab's proposals 
 
 
 ## Getting Started
@@ -50,6 +50,6 @@ http://localhost:3000/
 email sophiaw@brandeis.edu if there are any issues and the app cannot run
 
 
-## Acknowledgments
+## Papers
 
 * [The Engaging News Project Social Media Buttons in Comment Sections](https://mediaengagement.org/wp-content/uploads/2014/04/ENP_Buttons_Report.pdf)
