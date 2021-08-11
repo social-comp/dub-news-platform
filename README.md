@@ -3,7 +3,7 @@ News platform with Icon Button Labels for Improving Online Discourse
 
 
 ## Description
-A news platform created for one of Social Computing Lab's proposals 
+A news platform created for one of Social Computing Lab's grant proposals 
 
 
 ## Getting Started
