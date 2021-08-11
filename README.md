@@ -1,5 +1,5 @@
 # dub-news-platform
-News platform with button labels 
+News platform with Icon Button Labels for Improving Online Discourse
 
 
 ## Description
