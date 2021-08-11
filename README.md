@@ -6,10 +6,11 @@ News platform with Icon Button Labels for Improving Online Discourse
 A news platform created for one of Social Computing Lab's grant proposals 
 
 
-## Getting Started
 
-### Dependencies
+### Installation/Dependencies
 
+* [Installing Node.js® and NPM on Mac](https://treehouse.github.io/installation-guides/mac/node-mac.html)
+* [Installing Node.js® and NPM on Windows](https://treehouse.github.io/installation-guides/windows/node-windows.html)
 Node v14.16.0
 
     "axios": "^0.21.1",
